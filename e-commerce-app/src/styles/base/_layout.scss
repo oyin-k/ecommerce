@@ -1,11 +1,37 @@
-body {
-    padding: 0 8rem;
-    display: flex;
-    width: 100%;
-}
+:root {
+    // breakpoints
+    --breakpoint-max: 1440px;
+    --breakpoint-xs: 0px;
+    --breakpoint-sm: 600px;
+    --breakpoint-md: 960px;
+    --breakpoint-lg: 1280px;
+    --breakpoint-xl: 1920px;
+  }
+  
+  
+@mixin responsive($breakpoint) {
+    @if $breakpoint == xs {
+        @media (min-width: var(--breakpoint-xs)) { @content };
+    }
 
+    @if $breakpoint == sm {
+        @media (min-width: var(--breakpoint-sm)) { @content };
+    }
+
+    @if $breakpoint == md {
+        @media (min-width: var(--breakpoint-md)) { @content };
+    }
+
+    @if $breakpoint == lg {
+        @media (min-width: var(--breakpoint-lg)) { @content };
+    }
+
+    @if $breakpoint == xl {
+        @media (min-width: var(--breakpoint-xl)) { @content };
+    }
+}
 #root {
-    width: 100%;
+    // width: 100%;
 }
 
 .App {
