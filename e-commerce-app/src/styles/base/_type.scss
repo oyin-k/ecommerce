@@ -1,0 +1,29 @@
+body {
+  line-height: 1.4;
+}
+
+:root {
+  --text-header-1: 3rem;
+  --text-header-2: 2.5rem;
+  --text-header-3: 2rem;
+  --text-header-4: 1.5rem;
+  --text-special-header: 1.125rem;
+
+  --text-body: 1rem;
+
+  --text-small: 0.75rem;
+  --text-extra-small: 0.625rem;
+  --text-extra-large: 7.5rem;
+}
+
+/*
+ 40px - logo
+ 34px - store info normal
+ 44px - store info large
+ -24px - featured products header
+ 18.75px - product name, filter price title
+ 16px - footer, price, view button, checkout progress title
+ 121px - store info largest
+ 13px - nav, product detail
+ 10px - cart number
+*/

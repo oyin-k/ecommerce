@@ -1,1 +1,5 @@
-@import "base/layout";
+@import 'abstract/palette';
+
+@import 'base/reset';
+@import 'base/type';
+@import 'base/layout';
