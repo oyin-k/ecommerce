@@ -11,7 +11,7 @@ const Routes = () => {
   return (
     <BrowserRouter>
       <div className="app">
-        <h1 className="logo">Japa Market</h1>
+        <h1 className="site-logo">Japa Market</h1>
         <Nav></Nav>
         <div className="nav-content">
           <Switch>

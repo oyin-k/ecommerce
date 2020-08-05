@@ -1,16 +1,24 @@
 .nav {
-    margin-top: 4rem;
-    width: 100%;
+  margin: 4rem 8rem 0;
 }
 
 .nav .nav__list {
-    display: flex;
-    justify-content: center;
-    border-top: 1px solid #ededed;
-    border-bottom: 1px solid #ededed;
-    padding: .5rem 0;
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid #ededed;
+  border-bottom: 1px solid #ededed;
+  padding: 0.5rem 0;
 }
 
 .nav .nav__item {
-    padding: 0 1.5rem;
+  padding: 0 1.5rem;
+  font-size: var(--text-small);
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+a,
+a:active,
+a:visited {
+  text-decoration: none;
 }

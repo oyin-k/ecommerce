@@ -1,0 +1,11 @@
+.site-logo {
+  font-size: var(--text-header-3);
+  font-weight: 600;
+  color: var(--color-black);
+}
+
+.store-info {
+  &__text--normal {
+    font-size: var(--text-header-3);
+  }
+}
