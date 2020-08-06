@@ -2,10 +2,61 @@
   font-size: var(--text-header-3);
   font-weight: 600;
   color: var(--color-black);
+  display: flex;
+  justify-content: center;
+  margin: 4rem auto 0;
+}
+
+.content {
+  padding: 2.5rem 0;
 }
 
 .store-info {
-  &__text--normal {
-    font-size: var(--text-header-3);
+  position: relative;
+  display: flex;
+}
+
+.store-info__caption--bg,
+.store-info__caption--primary,
+.store-info__caption--title,
+.store-info__caption--subtitle {
+  position: absolute;
+}
+
+.store-info__caption {
+  width: 5rem;
+
+  &--bg {
+    font-size: var(--text-extra-large);
+    font-weight: 100;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    opacity: 0.1;
+    z-index: 50;
+  }
+
+  &--primary {
+    top: 3.5rem;
+    left: 3.5rem;
+    font-size: var(--text-header-2);
+    color: var(--color-primary-main);
+    font-weight: 500;
+    z-index: 200;
+  }
+
+  &--title {
+    top: 6.5rem;
+    left: 8rem;
+    font-size: var(--text-header-1);
+    font-weight: 500;
+    z-index: 200;
+  }
+
+  &--subtitle {
+    font-size: var(--text-extra-small);
+    text-transform: uppercase;
+    letter-spacing: 0.125rem;
+    top: 13rem;
+    left: 3.5rem;
   }
 }

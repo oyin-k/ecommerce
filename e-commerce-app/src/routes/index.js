@@ -11,15 +11,19 @@ const Routes = () => {
   return (
     <BrowserRouter>
       <div className="app">
-        <h1 className="site-logo">Japa Market</h1>
-        <Nav></Nav>
-        <div className="nav-content">
+        <header>
+          <h1 className="site-logo">Japa Market</h1>
+          <Nav></Nav>
+        </header>
+        <main className="content">
           <Switch>
             <Route path="/women" component={withLayout(Women)} />
             <Route path="/men" component={withLayout(Men)} />
             <Route exact path="/" component={withLayout(LandingPage)} />
           </Switch>
-        </div>
+          <div className="banner"></div>
+        </main>
+        <footer className="footer"></footer>
       </div>
     </BrowserRouter>
   );
