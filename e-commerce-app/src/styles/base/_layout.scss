@@ -8,47 +8,6 @@
   --breakpoint-xl: 1920px;
 }
 
-@mixin responsive($breakpoint) {
-  @if $breakpoint == xs {
-    @media (min-width: var(--breakpoint-xs)) {
-      @content;
-    }
-  }
-
-  @if $breakpoint == sm {
-    @media (min-width: var(--breakpoint-sm)) {
-      @content;
-    }
-  }
-
-  @if $breakpoint == md {
-    @media (min-width: var(--breakpoint-md)) {
-      @content;
-    }
-  }
-
-  @if $breakpoint == lg {
-    @media (min-width: var(--breakpoint-lg)) {
-      @content;
-    }
-  }
-
-  @if $breakpoint == xl {
-    @media (min-width: var(--breakpoint-xl)) {
-      @content;
-    }
-  }
-}
-#root {
-  // width: 100%;
-}
-
 .App {
   width: 100%;
-}
-
-.site-logo {
-  display: flex;
-  justify-content: center;
-  margin: 4rem auto 0;
 }
