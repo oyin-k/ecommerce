@@ -1,5 +1,11 @@
+@import '../../styles/main.scss';
+
 .nav {
-  margin: 4rem 8rem 0;
+  margin: 6.4rem 12.8rem 0;
+
+  @include responsive(xs) {
+    margin: 30px 40px 0;
+  }
 }
 
 .nav .nav__list {
@@ -7,17 +13,24 @@
   justify-content: center;
   border-top: 1px solid var(--color-gray);
   border-bottom: 1px solid var(--color-gray);
-  padding: 0.625rem 0;
+  padding: 1rem 0;
 }
 
 .nav .nav__item {
-  padding: 0 1.5rem;
+  padding: 0 2.4rem;
   font-size: var(--text-small);
   text-transform: uppercase;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.16rem;
   border-right: 1px solid var(--color-gray-2);
   border-left: 1px solid var(--color-gray-2);
-  margin: 0 0.15rem;
+  margin: 0 0.24rem;
+
+  @include responsive(xs) {
+    border: none;
+    margin: 0;
+    padding: 0 1.5rem;
+    font-size: 12px;
+  }
 }
 
 .nav .nav__item a {
