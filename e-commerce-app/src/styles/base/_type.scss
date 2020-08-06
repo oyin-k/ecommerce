@@ -1,20 +1,32 @@
+:root {
+  --text-header-1: 6.4rem;
+  --text-header-2: 4.8rem;
+  --text-header-3: 4rem;
+  --text-header-4: 2.4rem;
+  --text-special-header: 1.8rem;
+
+  --text-body: 1.6rem;
+
+  --text-small: 1.2rem;
+  --text-extra-small: 1.4rem;
+  --text-extra-large: 16rem;
+}
+
+html {
+  font-size: $font-size-base;
+
+  //   @include responsive(sm) {
+  //     font-size: $font-size-sm;
+  //   }
+
+  @include responsive(xs) {
+    font-size: $font-size-xs;
+  }
+}
+
 body {
   line-height: 1.4;
   color: var(--color-black);
-}
-
-:root {
-  --text-header-1: 4rem;
-  --text-header-2: 3rem;
-  --text-header-3: 2.5rem;
-  --text-header-4: 1.5rem;
-  --text-special-header: 1.125rem;
-
-  --text-body: 1rem;
-
-  --text-small: 0.75rem;
-  --text-extra-small: 0.875rem;
-  --text-extra-large: 10rem;
 }
 
 /*
