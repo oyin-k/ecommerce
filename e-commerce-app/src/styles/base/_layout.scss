@@ -1,3 +1,21 @@
 .App {
   width: 100%;
 }
+
+.footer {
+  background-color: var(--color-black);
+  padding: 3.2rem 12.8rem;
+  color: var(--color-gray-2);
+  font-size: var(--text-special-header);
+
+  @include responsive(xs) {
+    padding: 3.2rem 4rem;
+  }
+
+  a,
+  a:active,
+  a:visited {
+    text-decoration: none;
+    color: var(--color-primary-main);
+  }
+}

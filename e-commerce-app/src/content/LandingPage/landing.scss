@@ -108,11 +108,19 @@
   justify-content: center;
   padding: 4rem 0;
 
+  @include responsive(xs) {
+    flex-direction: column;
+  }
+
   &__card {
     margin: 0 2rem;
     padding: 6rem 4rem;
     border: 1px solid var(--color-gray-2);
     text-align: center;
+
+    @include responsive(xs) {
+      margin: 1rem 0;
+    }
   }
 
   &__title {

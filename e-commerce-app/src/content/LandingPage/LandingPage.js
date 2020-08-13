@@ -1,12 +1,28 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+
+import { db } from '../../services/firebase';
 
 import StoreInfo from '../../components/StoreInfo';
+import FeaturedProducts from '../../components/FeaturedProducts';
 
 import shoe from '../../assets/images/shoe1.jpg';
 import bag from '../../assets/images/bag.jpg';
 import './landing.scss';
 
 const LandingPage = () => {
+  const [featuredPosts, setFeaturedPosts] = useState([]);
+
+  useEffect(() => {
+    db.collection('products').onSnapshot((snapshot) => {
+      setFeaturedPosts(
+        snapshot.docs.map((doc) => ({
+          id: doc.id,
+          featuredPost: doc.data(),
+        }))
+      );
+    });
+  }, []);
+
   return (
     <section className="landing-page">
       <StoreInfo
@@ -37,7 +53,17 @@ const LandingPage = () => {
         subtitleText={'all accessories'}
         image={bag}
       />
-      {/* <FeaturedProducts /> */}
+      {featuredPosts.map(({ id, featuredPost }) => {
+        console.log(id, featuredPost);
+        return (
+          <FeaturedProducts
+            key={id}
+            name={featuredPost.name}
+            price={featuredPost.price}
+            image={featuredPost.img}
+          />
+        );
+      })}
     </section>
   );
 };
